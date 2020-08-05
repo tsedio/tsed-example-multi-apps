@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@project/*": [
+        "packages/*/src"
+      ]
+    }
+  },
+  "linterOptions": {
+    "exclude": []
+  },
+  "exclude": [
+    "test",
+    "**/test",
+    "lib",
+    "**/lib"
+  ]
+}

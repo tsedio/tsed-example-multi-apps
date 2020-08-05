@@ -1,0 +1,28 @@
+{
+  "name": "@project/app-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.compile.json",
+    "start": "nodemon --watch \"../**/src/**/*.ts\" --ignore \"node_modules/**/*\" --exec ts-node -r tsconfig-paths/register src/index.ts",
+    "test": "yarn test:lint && yarn test:coverage",
+    "test:unit": "cross-env NODE_ENV=test jest",
+    "test:coverage": "yarn test:unit",
+    "test:lint": "eslint src --ext .ts",
+    "test:lint:fix": "eslint src --ext .ts --fix",
+    "prettier": "prettier '{src,test}/**/*.ts' --write"
+  },
+  "dependencies": {
+    "@project/server": "1.0.0"
+  },
+  "devDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "peerDependencies": {}
+}
