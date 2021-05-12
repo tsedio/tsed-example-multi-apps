@@ -20,7 +20,7 @@
   "dependencies": {
     "@tsed/ajv": "5.61.4",
     "@tsed/common": "5.61.4",
-    "@tsed/core": "5.61.4",
+    "@tsed/core": "5.65.7",
     "@tsed/di": "5.61.4",
     "@tsed/exceptions": "5.61.4",
     "@tsed/platform-express": "5.61.4",
